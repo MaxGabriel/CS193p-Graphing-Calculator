@@ -45,15 +45,10 @@
 
 - (void)pinch:(UIPinchGestureRecognizer *)gesture
 {
-    NSLog(@"Started Pinch");
-    NSLog(@"%f",[self scale]);
     if ((gesture.state == UIGestureRecognizerStateChanged) ||
         (gesture.state == UIGestureRecognizerStateEnded)) {
         self.scale *= gesture.scale; //adjust scale
         gesture.scale = 1;
-        NSLog(@"Adjusted Scale");
-        NSLog(@"%f",[self scale]);
-        
     }
 }
 
